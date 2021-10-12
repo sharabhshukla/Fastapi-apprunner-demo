@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import uvicorn
 import os
 
 app = FastAPI()
@@ -15,6 +16,9 @@ def return_name():
         return {'Name': name}
     else:
         return {'name not found'}
+
+if __name__ == '__main__':
+    uvicorn.run("main:app", host="0.0.0.0", port=8081, reload=True, debug=True)
 
 
 
