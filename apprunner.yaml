@@ -5,4 +5,7 @@ build:
     build:
       - pip install -r requirements.txt 
 run: 
-  command: uvicorn main:app --port 80
+  command: uvicorn main:app --port 8080 --host '0.0.0.0'
+  env:
+    - name: NAME
+      value: SHARABH
