@@ -1,10 +1,9 @@
 from fastapi import FastAPI
-from fastapi.logger import logger
+from loguru import logger
 import uvicorn
 import os
 
 app = FastAPI()
-logger.setLevel('INFO')
 
 
 @app.get('/', status_code=200)
